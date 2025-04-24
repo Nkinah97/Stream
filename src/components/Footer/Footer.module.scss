@@ -1,0 +1,87 @@
+@import '../../styles/breakpoints';
+
+.footer {
+    background-color: #fff;
+    padding: 60px 0;
+    border-top: 1px solid #eee;
+    overflow: hidden;
+
+    @include mobile {
+        padding: 30px 0;
+    }
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+        text-align: center;
+    }
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include mobile {
+        align-items: center;
+    }
+}
+
+.footerTitle {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @include mobile {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+
+.footerLink {
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #574DCC;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+}
+
+.footerEmail {
+    color: #574DCC;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+}

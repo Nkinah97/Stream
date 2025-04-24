@@ -1,0 +1,71 @@
+.findWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    isolation: isolate;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle at top, #3494E6 30%, #EC6EAD 100%);
+        filter: blur(100px);
+        -webkit-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        opacity: 0.5;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle at top, #3494E6 30%, #EC6EAD 100%);
+        filter: blur(100px);
+        -webkit-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        opacity: 0.5;
+        left: 50px;
+        top: 30%;
+        transform: translateY(-50%);
+        z-index: -1;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+}
+
+.findTitle {
+    margin-bottom: 30px;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.findContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 15px;
+    max-width: 800px;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    }
+}

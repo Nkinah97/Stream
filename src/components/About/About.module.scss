@@ -1,0 +1,84 @@
+@import '../../styles/breakpoints.scss';
+
+.aboutWrapper {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 1350px;
+    width: 100%;
+    margin: 20px auto;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 170px;
+    position: relative;
+    isolation: isolate;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 250px;
+        background: radial-gradient(circle at top, #3494E6 30%, #EC6EAD 100%);
+        filter: blur(100px);
+        -webkit-filter: blur(50px);
+        backdrop-filter: blur(50px);
+        opacity: 0.6;
+        right: 5px;
+        top: 35%;
+        transform: translateY(-50%);
+        z-index: -1;
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
+
+.about {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.aboutTop {
+    margin-bottom: 20px;
+    @include tablet {
+        font-size: 20px;
+    }
+}
+
+.aboutbottom {
+    margin-bottom: 50px;
+
+    @include tablet {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.aboutBtn {
+    background: linear-gradient(to bottom, #574DCC 0%, #579AFF 100%);
+    padding: 20px 90px;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.aboutBtn span {
+    color: white;
+    @include tablet {
+        display: block;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,128 @@
+@import '../../styles/breakpoints';
+
+.dedicatedWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+
+    @include mobile {
+        flex-direction: column;
+        padding: 0 15px;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+.dedicatedLeft {
+    max-width: 500px;
+    text-align: start;
+
+    @include mobile {
+        max-width: 100%;
+        text-align: center;
+        order: -1;
+    }
+}
+
+.dedicatedLeftTitle {
+    font-size: 48px;
+    margin-bottom: 20px;
+
+    @include mobile {
+        font-size: 20px;
+        br {
+            display: none;
+        }
+    }
+}
+
+.dedicatedLeftDesc {
+    font-size: 18px;
+    margin-bottom: 30px;
+
+    @include mobile {
+        font-size: 16px;
+    }
+}
+
+.dedicatedRight {
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        position: relative;
+        z-index: 2;
+
+        @include mobile {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 450px;
+        background: radial-gradient(circle, #574DCC 50%, #EC6EAD 100%);
+        filter: blur(50px);
+        opacity: 0.5;
+        right: 50px;
+        z-index: -1;
+        border-radius: 50%;
+
+        @include mobile {
+            // width: 280px;
+            height: 350px;
+            right: 50%;
+            transform: translateX(50%);
+            opacity: 0.6;
+
+            top: -50px;
+
+        }
+    }
+}
+
+.dedicatedRightContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.dedicatedRightText {
+    max-width: 100%;
+    height: auto;
+}
+
+.dedicatedBtn {
+    background: linear-gradient(to bottom, #574DCC 0%, #579AFF 100%);
+    padding: 20px 90px;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+
+    @include mobile {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0;
+        padding: 15px 30px;
+    }
+}

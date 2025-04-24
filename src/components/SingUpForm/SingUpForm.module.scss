@@ -1,0 +1,340 @@
+@import '../../styles/breakpoints';
+
+.form {
+    width: 100%;
+    max-width: 385px;
+    margin: 0 auto;
+
+    @include mobile {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    @include tablet {
+        max-width: 385px;
+        padding: 0;
+    }
+}
+
+.formWrapper {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    
+    @include mobile {
+        padding: 1.5rem;
+        border-radius: 12px;
+        min-height: 450px;
+    }
+
+    @include tablet {
+        padding: 1.75rem;
+        min-height: 480px;
+    }
+}
+
+.Button {
+    height: 60px;
+    width: 100%;
+    padding: 0px 5px;
+    background: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-bottom: 20px;
+
+    @include mobile {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    @include tablet {
+        height: 55px;
+        font-size: 15px;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    svg {
+        background: white;
+        padding: 2px;
+    }
+}
+
+.googleButton,
+.mailButton {
+    display: flex;
+    justify-content: start;
+
+    @include mobile {
+        .btnicon {
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+        }
+    }
+}
+
+.btnicon {
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+
+    @include mobile {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    @include tablet {
+        width: 45px;
+        height: 45px;
+        padding: 9px;
+    }
+}
+
+.divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #666;
+
+    &::before,
+    &::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    span {
+        margin: 0 10px;
+        color: #999;
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 12px;
+        }
+
+        @include tablet {
+            font-size: 13px;
+        }
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #E5E5E5;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #F8F8F8;
+
+        @include mobile {
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        @include tablet {
+            padding: 11px;
+            font-size: 13px;
+        }
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #4285F4;
+            background: white;
+        }
+    }
+}
+
+.passwordInput {
+    position: relative;
+
+    input {
+        padding-right: 40px;
+    }
+}
+
+.showPasswordButton {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    background: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.terms {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: auto;
+
+    @include mobile {
+        font-size: 11px;
+    }
+}
+
+.switch {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.switchLeft,
+.switchRight {
+    height: 5px;
+    width: 30px;
+    background-color: rgba(88, 147, 250, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+
+    &.active {
+        background-color: #5893FA;
+    }
+
+    &:hover {
+        background-color: #5893FA;
+    }
+}
+
+.genderGroup {
+    margin-bottom: 20px;
+
+    p {
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+}
+
+.genderButtons {
+    display: flex;
+    gap: 8px;
+    background: #F8F8F8;
+    padding: 4px;
+    border-radius: 8px;
+    width: 100%;
+
+    @include mobile {
+        gap: 6px;
+        padding: 3px;
+    }
+}
+
+.genderButton {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+
+    @include mobile {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    @include tablet {
+        padding: 11px;
+        font-size: 13px;
+    }
+
+    &.active {
+        background: white;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    &:hover:not(.active) {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.termsCheckbox {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+
+    input[type="checkbox"] {
+        margin-top: 3px;
+    }
+
+    label {
+        font-size: 12px;
+        color: #666;
+        line-height: 1.5;
+    }
+}
+
+.signUpButton {
+    display: none;
+}
